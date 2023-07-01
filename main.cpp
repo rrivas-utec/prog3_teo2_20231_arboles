@@ -15,9 +15,13 @@ int main() {
         cout << item.first << " " << item.second << endl;
     });
     cout << "-----\n";
+    bst.dfs([](auto& item) {
+        cout << item.first << " " << item.second << endl;
+    });
+    cout << "-----\n";
     // Recorrido a la profundidad (in order)
     bst.in_order([](auto& item) {
         cout << item.first << " " << item.second << endl;
-    })
+    });
     return 0;
 }
